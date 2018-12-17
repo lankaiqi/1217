@@ -13,7 +13,7 @@ object AdvUrlCount {
     val arr = Array("java.itcast.cn","php.itcast.cn","net.itcast.cn")
     val conf = new SparkConf().setAppName("UrlCount").setMaster("local[2]")
     val sc = new SparkContext(conf)
-
+//rdd1 将数据进行切分,元祖中放的是(URL,1)
     //rdd1 将数据进行切分,元祖中放的是(URL,1)
     val rdd1 = sc.textFile("c://itcast.log").map(lint => {
       val f = lint.split("\t")
