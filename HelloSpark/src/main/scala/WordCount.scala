@@ -21,7 +21,8 @@ object WordCount {
       //产生一个RDD: mapPartitions
       .saveAsTextFile("hdfs://lkq:8020/work24")
     //println(aaa.collect().toBuffer)
-
+//println(aaa.collect().toBuffer)
+   //println(aaa.collect().toBuffer)
     sc.stop()
   }
 }
